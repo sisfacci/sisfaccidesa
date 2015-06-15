@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-jun-2015 14:57:14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.facci.jhs.persistence.Parametros" table="parametros" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="valornumerico" type="java.lang.Integer">
+            <column name="valornumerico" />
+        </property>
+        <property name="valorcaracter" type="string">
+            <column name="valorcaracter" length="300" />
+        </property>
+        <property name="codigo" type="string">
+            <column name="codigo" length="12" />
+        </property>
+        <property name="activo" type="java.lang.Boolean">
+            <column name="activo" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-jun-2015 14:57:14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.facci.jhs.persistence.LogActividades" table="log_actividades" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="metodo" type="string">
+            <column name="metodo" length="50" />
+        </property>
+        <property name="accion" type="string">
+            <column name="accion" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="35" />
+        </property>
+        <property name="visible" type="java.lang.Boolean">
+            <column name="visible" />
+        </property>
+    </class>
+</hibernate-mapping>

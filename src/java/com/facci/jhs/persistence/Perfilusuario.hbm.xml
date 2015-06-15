@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-jun-2015 14:57:14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.facci.jhs.persistence.Perfilusuario" table="perfilusuario" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="perfil" class="com.facci.jhs.persistence.Perfil" fetch="select">
+            <column name="idperfil" />
+        </many-to-one>
+        <many-to-one name="usuario" class="com.facci.jhs.persistence.Usuario" fetch="select">
+            <column name="idusuario" />
+        </many-to-one>
+        <property name="activo" type="java.lang.Boolean">
+            <column name="activo" />
+        </property>
+    </class>
+</hibernate-mapping>

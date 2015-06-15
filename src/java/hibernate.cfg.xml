@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/sisfacci</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">1234</property>
+    <mapping resource="com/facci/jhs/persistence/Usuario.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Rol.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Perfilusuario.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Parametros.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/LogActividades.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Facultad.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Perfil.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Grupo.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Recurso.hbm.xml"/>
+    <mapping resource="com/facci/jhs/persistence/Perfilrecurso.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

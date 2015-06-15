@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="sisfacci" match-schema="public"/>
+  <table-filter match-name="parametros"/>
+  <table-filter match-name="rol"/>
+  <table-filter match-name="perfilrecurso"/>
+  <table-filter match-name="grupo"/>
+  <table-filter match-name="recurso"/>
+  <table-filter match-name="facultad"/>
+  <table-filter match-name="log_actividades"/>
+  <table-filter match-name="perfil"/>
+  <table-filter match-name="perfilusuario"/>
+  <table-filter match-name="usuario"/>
+</hibernate-reverse-engineering>

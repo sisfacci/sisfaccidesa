@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-jun-2015 14:57:14 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.facci.jhs.persistence.Usuario" table="usuario" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="facultad" class="com.facci.jhs.persistence.Facultad" fetch="select">
+            <column name="idfacultad" />
+        </many-to-one>
+        <many-to-one name="rol" class="com.facci.jhs.persistence.Rol" fetch="select">
+            <column name="idrol" />
+        </many-to-one>
+        <property name="nombres" type="string">
+            <column name="nombres" length="200" />
+        </property>
+        <property name="alias" type="string">
+            <column name="alias" length="13" />
+        </property>
+        <property name="clave" type="string">
+            <column name="clave" />
+        </property>
+        <property name="identificacion" type="string">
+            <column name="identificacion" length="13" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="300" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="20" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="300" />
+        </property>
+        <property name="fechacreacion" type="timestamp">
+            <column name="fechacreacion" length="35" />
+        </property>
+        <property name="usuariocreacion" type="string">
+            <column name="usuariocreacion" length="13" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="13" />
+        </property>
+        <property name="fechamodificacion" type="timestamp">
+            <column name="fechamodificacion" length="35" />
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="estado" />
+        </property>
+        <set name="perfilusuarios" table="perfilusuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" />
+            </key>
+            <one-to-many class="com.facci.jhs.persistence.Perfilusuario" />
+        </set>
+    </class>
+</hibernate-mapping>
